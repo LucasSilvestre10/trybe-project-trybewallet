@@ -3,4 +3,9 @@ const actionLogin = (email) => ({
   payload: email,
 });
 
-export default actionLogin;
+const actionSetCurrencies = (currencies) => ({
+  type: 'SET_CURRENCIES',
+  payload: currencies,
+});
+
+export { actionLogin, actionSetCurrencies };

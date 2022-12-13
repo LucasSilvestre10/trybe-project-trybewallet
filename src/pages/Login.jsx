@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import actionLogin from '../redux/actions';
+import { actionLogin } from '../redux/actions';
 
 const MIN_PARAM = 6;
 
