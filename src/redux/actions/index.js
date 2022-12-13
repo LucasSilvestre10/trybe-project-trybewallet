@@ -8,4 +8,9 @@ const actionSetCurrencies = (currencies) => ({
   payload: currencies,
 });
 
-export { actionLogin, actionSetCurrencies };
+const actionSaveExpenses = (expenses) => ({
+  type: 'SAVE_EXPENSES',
+  payload: expenses,
+});
+
+export { actionLogin, actionSetCurrencies, actionSaveExpenses };

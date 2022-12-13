@@ -5,4 +5,10 @@ const getCurrencies = async () => {
   return result;
 };
 
-export default getCurrencies;
+const exchangeRates = async () => {
+  const getApi = await fetch('https://economia.awesomeapi.com.br/json/all');
+  const data = await getApi.json();
+  return data;
+};
+
+export { getCurrencies, exchangeRates };
