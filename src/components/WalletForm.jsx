@@ -70,7 +70,7 @@ class WalletForm extends Component {
   render() {
     const { expense, description, currencies } = this.state;
     return (
-      <main>
+      <section>
         <input
           data-testid="value-input"
           placeholder="Valor"
@@ -126,7 +126,7 @@ class WalletForm extends Component {
           Adicionar despesa
 
         </button>
-      </main>
+      </section>
     );
   }
 }
