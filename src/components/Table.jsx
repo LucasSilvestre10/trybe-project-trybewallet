@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { actionDeleteExpenses } from '../redux/actions';
+import { actionDeleteExpenses, actionEditExpenses } from '../redux/actions';
 
 class Table extends React.Component {
   deleteExpense = (element) => {
@@ -11,6 +11,16 @@ class Table extends React.Component {
     const result = expenses.filter((e) => e.id !== +element.target.id);
     dispatch(actionDeleteExpenses(result));
   };
+
+  editeExpenses = (element) => {
+    console.log('deu certo');
+    const { dispatch } = this.props;
+    dispatch(actionEditExpenses(+element.target.id));
+  };
+
+  /* shouldComponentUpdate() {
+
+  } */
 
   render() {
     const { expenses } = this.props;
@@ -54,8 +64,11 @@ class Table extends React.Component {
               <td>Real</td>
               <td>
                 <button
+                  id={ id }
                   name="edit"
                   type="button"
+                  onClick={ this.editeExpenses }
+                  data-testid="edit-btn"
                 >
                   Editar
                 </button>

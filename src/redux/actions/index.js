@@ -16,5 +16,20 @@ const actionDeleteExpenses = (expenses) => ({
   type: 'DELETE_EXPENSES',
   payload: expenses,
 });
+const actionEditExpenses = (idToEdit) => ({
+  type: 'EDIT_EXPENSES',
+  payload: idToEdit,
+});
+const actionSaveEditExpenses = (newExpenses) => ({
+  type: 'SAVE_EDIT_EXPENSES',
+  payload: newExpenses,
+});
 
-export { actionLogin, actionSetCurrencies, actionSaveExpenses, actionDeleteExpenses };
+export {
+  actionLogin,
+  actionSetCurrencies,
+  actionSaveExpenses,
+  actionDeleteExpenses,
+  actionEditExpenses,
+  actionSaveEditExpenses,
+};

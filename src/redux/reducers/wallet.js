@@ -22,6 +22,19 @@ function wallet(state = INITIAL_STATE, action) {
       ...state,
       expenses: action.payload,
     };
+  case 'EDIT_EXPENSES':
+    return {
+      ...state,
+      idToEdit: action.payload,
+      editor: true,
+    };
+  case 'SAVE_EDIT_EXPENSES':
+    return {
+      ...state,
+      expenses: action.payload,
+      idToEdit: 0,
+      editor: true,
+    };
   default:
     return state;
   }
